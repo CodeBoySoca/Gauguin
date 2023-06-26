@@ -10,16 +10,59 @@ load_dotenv('.env')
 Frame._client = MongoClient(os.getenv('MONGO_URI'))
 
 class Student(Frame):
-    pass
+    _fields = {
+        'name',
+        'email',
+        'image',
+        'last_active',
+        'created_account'
+        'assignments',
+        'events'
+    }
 
 class Professor(Frame):
-    pass
+     _fields = {
+        'name',
+        'email',
+        'image',
+        'last_active',
+        'created_account'
+        'students',
+        'assignments',
+        'events'
+     }
 
 class Assignments(SubFrame):
-    pass
+    _fields = {
+        'title',
+        'assignment',
+        'date_added',
+        'due_date',
+        'notes',
+        'comments'
+    }
+
+class Comments(SubFrame):
+    _fields = {
+        'user_id',
+        'comment_date',
+        'comment'
+    }
+
+class Notes(SubFrame):
+    _fields = {
+        'title',
+        'note',
+        'date_added'
+    }
 
 class Events(SubFrame):
-    pass
+    _fields = {
+        'title',
+        'event',
+        'event_date',
+        'event_type'
+    }
 
 
 

@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    pass
+    return render_template('index.html')
 
 @app.route('/logout')
 def logout():
@@ -51,7 +51,7 @@ def professor_settings():
 def professor_calendar():
     pass
 
-@app.route('professor/events/reminders')
+@app.route('/professor/events/reminders')
 def professor_event_reminders():
     pass
 
