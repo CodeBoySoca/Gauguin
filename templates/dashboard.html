@@ -1,3 +1,25 @@
 {% extends 'base.html' %}
 {% block content %}
+{% if request.endpoint == 'professor_dashboard' %}
+<div class="assignment-container">
+    <div class="form-container">
+        <h2>Assignments</h2>
+        <form method="post">
+        <input type="text" name="title" placeholder="Title" required>
+        <textarea name="assignment" placeholder="Assignment" required></textarea>
+        <label>Due date <input type="date" name="due_date" required></label>
+        <label>Status
+        <select name="status">
+          <option value="available">Available to students</option>
+          <option value="unavailable">Students are unable to access</option>
+        </select>
+      </label> 
+      <textarea name="notes" placeholder="Notes" required></textarea>
+      <input type="submit" value="Save Assignment">
+      </form>
+    </div>
+    </div>
+{% elif request.endpoint == 'student_dashboard' %}
+   <h1>Student</h1>
+{% endif %}
 {% endblock %}
