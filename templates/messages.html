@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if request.endpoint == 'professor_messages' %}
+<div class="messages-container">
+    <div class="search"><input type="text" name="search" placeholder="Search"></div> 
+    <div class="form-container">
+        <h2>Messages</h2>
+        {% set professor = 'Betty' %}
+        <p>Hello {{ professor }}, here are your messages</p>
+        <div class="flex-messages">
+            <div class="message-date">03/02/2022</div> 
+            <div class="student">Joe Doe</div> 
+            <div class="subject">Questions about art supplies</div> 
+            <div class="message">Hey, can I use a ballpoint pen for the first assignment? Thanks</div> 
+        </div>
+      <button type="submit">Compose"</button>
+    </div>
+    </div>
+{% elif request.endpoint == 'student_messages' %}
+   <h1>Messages</h1>
+   {% set student = 'Joe' %}
+   <p>Hello {{ student }}, here are your messages</p>
+   <div class="messages-container">
+    <div class="search"><input type="text" name="search" placeholder="Search"></div> 
+    <div class="form-container">
+        <h2>Messages</h2>
+        <div class="flex-messages">
+            <div class="message-date">03/02/2022</div> 
+            <div class="student">Joe Doe</div> 
+            <div class="subject">Questions about art supplies</div> 
+            <div class="message">Hey, can I use a ballpoint pen for the first assignment? Thanks</div> 
+        </div>
+      <button type="submit">Compose"</button>
+    </div>
+    </div>
+{% endif %}
+{% endblock %}

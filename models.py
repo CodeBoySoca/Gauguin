@@ -17,7 +17,8 @@ class Student(Frame):
         'last_active',
         'created_account'
         'assignments',
-        'events'
+        'events',
+        'messages'
     }
 
 class Professor(Frame):
@@ -29,7 +30,8 @@ class Professor(Frame):
         'created_account'
         'students',
         'assignments',
-        'events'
+        'events',
+        'messages'
      }
 
 class Assignments(SubFrame):
@@ -62,6 +64,14 @@ class Events(SubFrame):
         'event',
         'event_date',
         'event_type'
+    }
+
+class Messages(SubFrame):
+    _fields = {
+        'sender',
+        'date_sent',
+        'subject',
+        'message'
     }
 
 

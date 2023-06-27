@@ -40,6 +40,10 @@ def student_calendar():
 def student_event_reminders():
     return render_template('reminders.html')
 
+@app.route('/student/messages')
+def student_messages():
+    return render_template('messages.html')
+
 @app.route('/professor/dashboard')
 def professor_dashboard():
     return render_template('dashboard.html')
@@ -61,6 +65,10 @@ def professor_calendar():
 @app.route('/professor/events/reminders')
 def professor_event_reminders():
     return render_template('reminders.html')
+
+@app.route('/professor/messages')
+def professor_messages():
+    return render_template('messages.html')
 
 @app.errorhandler(404)
 def page_not_found(error):
