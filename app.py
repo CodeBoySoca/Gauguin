@@ -1,5 +1,7 @@
 from flask import Flask, redirect, url_for, render_template, session
 from models import *
+import calendar
+import datetime
 
 app = Flask(__name__)
 
@@ -30,7 +32,9 @@ def student_view_assignments():
 
 @app.route('/student/events/calendar')
 def student_calendar():
-    return render_template('calendar.html')
+    student_calendar = calendar.HTMLCalendar(firstweekday=0)
+    student_current_date = datetime.datetime.now()
+    return render_template('calendar.html', calendar=student_calendar.formatmonth(student_current_date.year, student_current_date.month))
 
 @app.route('/student/events/reminders')
 def student_event_reminders():
@@ -50,7 +54,9 @@ def professor_settings():
 
 @app.route('/professor/events/calendar')
 def professor_calendar():
-    return render_template('calendar.html')
+    professor_calendar = calendar.HTMLCalendar(firstweekday=0)
+    professor_current_date = datetime.datetime.today()
+    return render_template('calendar.html', calendar= professor_calendar.formatmonth(professor_current_date.year, professor_current_date.month))
     
 @app.route('/professor/events/reminders')
 def professor_event_reminders():
