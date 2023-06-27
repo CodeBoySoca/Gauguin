@@ -1,3 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
+<div class="settings-container">
+  <div class="form-container">
+    <h2>Settings</h2>
+    <form method="post">
+        <label>Add photo
+            <div id="photo-upload">
+              <input type="file" name="upload_image">
+            </div>
+          </label>
+        <input type="email" name="email" placeholder="Change Email address">
+        <input type="password" name="password" placeholder="Change Password">  
+        <input type="submit" value="Save changes">
+      </form>
+  </div>   
+</div>
 {% endblock %}
