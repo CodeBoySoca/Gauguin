@@ -3,12 +3,12 @@
 <div class="form-container">
   <h2>Login</h2>
   <form method="post">
-    <input type="text" name="name" placeholder="Name" required>
+    <input type="email" name="email" placeholder="E-mail" required>
     <input type="password" name="password" placeholder="Password" required>
     <input type="submit" value="Log in">
   </form>
   <div class="form-footer-container">
-    <span>Have an account? Sign in <a href="{{ url_for('register')}}">here</a></span>
+    <span>Don&apos;t have an account? Sign up <a href="{{ url_for('register')}}">here</a></span>
   </div>
 </div>
 {% endblock %}
