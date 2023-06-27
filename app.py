@@ -1,4 +1,4 @@
-from flask import Flask, redirect, url_for, render_template, sessions
+from flask import Flask, redirect, url_for, render_template, session
 from models import *
 
 app = Flask(__name__)
@@ -9,51 +9,52 @@ def index():
 
 @app.route('/logout')
 def logout():
-    pass
+    session.clear()
+    return redirect(url_for('index'))
 
 @app.route('/register')
 def register():
-    pass
+    return render_template('register.html')
 
 @app.route('/student/dashboard')
 def student_dashboard():
-    pass
+    return render_template('dashboard.html')
 
 @app.route('/student/settings')
 def student_settings():
-    pass
+    return render_template('settings.html')
 
 @app.route('/student/view/assignments')
 def student_view_assignments():
-    pass
+    return render_template('assignments.html')
 
 @app.route('/student/events/calendar')
 def student_calendar():
-    pass
+    return render_template('calendar.html')
 
 @app.route('/student/events/reminders')
 def student_event_reminders():
-    pass
+    return render_template('reminders.html')
 
 @app.route('/professor/dashboard')
 def professor_dashboard():
-    pass
+    return render_template('dashboard.html')
 
 @app.route('/professor/view/assignments')
 def professor_view_assignments():
-    pass
+    return render_template('assignments.html')
 
 @app.route('/professor/settings')
 def professor_settings():
-    pass
+     return render_template('settings.html')
 
 @app.route('/professor/events/calendar')
 def professor_calendar():
-    pass
-
+    return render_template('calendar.html')
+    
 @app.route('/professor/events/reminders')
 def professor_event_reminders():
-    pass
+    return render_template('reminders.html')
 
 @app.errorhandler(404)
 def page_not_found(error):
