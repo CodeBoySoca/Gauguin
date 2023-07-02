@@ -7,13 +7,81 @@ html {
     box-sizing: border-box;
 }
 
+form input::placeholder {
+    padding-left: 5px;
+}
+
+
 header {
-    width: 100%;
+    width: 80%;
     height: 85px;
-    margin: 25px 0 0 25px;
+    margin: 35px auto 0 auto;
 }
 
 #logo img {
     width: 8%;
     height: auto;
+}
+
+.form-container {}
+
+
+.form-container .register,
+.login {
+    width: 35%;
+    margin: 5% auto 0 auto;
+}
+
+.form-container .register h2,
+.login h2 {
+    margin-bottom: 30px;
+}
+
+
+.form-container .register form {}
+
+
+.form-container .register form label {
+    margin-bottom: 10px;
+    display: block;
+
+}
+
+.form-container .register form select {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 25px;
+    border: 1px solid #ccc;
+    color: #0e0e0e;
+
+}
+
+.form-container .register form input,
+.login form input {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 25px;
+    border: 1px solid #ccc;
+}
+
+
+.form-container .register form input {}
+
+
+.form-container .register form input[type='submit'],
+.login form input[type='submit'] {
+    width: 100%;
+    height: 60px;
+}
+
+.form-footer-container {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.form-footer-container span {
+    width: 45%;
+    text-align: center;
+    display: inline;
+
 }

@@ -1,19 +1,19 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="form-container">
+  <div class="register">
     <h2>Register</h2>
     <form method="post">
       <input type="text" name="name" placeholder="Name" required>
       <input type="email" name="email" placeholder="E-mail" required>
       <input type="password" name="password" placeholder="Password" required>
       <input type="password" name="confirm-password" placeholder="Confirm Password" required>
-      <label>Are you student or a professor?
+      <label>Are you student or a professor?</label>
       <select name="role">
         <option value="student">I&apos;m a student</option>
         <option value="professor">I&apos;m a professor</option>
       </select>
-    </label>
-    <label>What school?
+    <label>What school?</label>
       <select name="school">
           <option value="otis">Otis</option>
           <option value="risd">RISD</option>
@@ -22,12 +22,12 @@
           <option value="sva">SVA</option>
           <option value="ringling">Ringling</option>
           <option value="calarts">CalArts</option>
-      </select>
-    </label>   
+      </select>  
       <input type="submit" value="Register your account">
     </form>
     <div class="form-footer-container">
       <span>Have an account? Sign in <a href="{{ url_for('index')}}">here</a></span>
     </div>
+  </div>
   </div>
 {% endblock %}
