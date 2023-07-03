@@ -48,7 +48,8 @@ class Comments(SubFrame):
     _fields = {
         'user_id',
         'comment_date',
-        'comment'
+        'comment',
+        'replies'
     }
 
 class Notes(SubFrame):
@@ -74,5 +75,18 @@ class Messages(SubFrame):
         'message'
     }
 
+class Discussion(SubFrame):
+       _fields = {
+          'discussion_id',
+          'topic',
+          'media',
+          'created_at',
+          'comments'
+       }
 
-
+class Replies(SubFrame):
+     _fields = {
+          'user_id',
+          'reply_date',
+          'reply'
+     }
