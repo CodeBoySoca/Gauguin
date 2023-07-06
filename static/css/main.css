@@ -7,7 +7,8 @@ html {
     box-sizing: border-box;
 }
 
-form input::placeholder {
+form input::placeholder,
+form textarea::placeholder {
     padding-left: 5px;
 }
 
@@ -83,5 +84,51 @@ header {
     width: 45%;
     text-align: center;
     display: inline;
+}
 
+
+.form-container {
+    width: 35%;
+    margin: 3% auto 0 auto;
+}
+
+.form-container h2 {
+    font: normal 900 1.7em Avenir, sans-serif;
+    margin-bottom: 30px;
+}
+
+
+.form-container form input {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 25px;
+    border: 1px solid #ccc;
+}
+
+
+.form-container form textarea {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 25px;
+    border: 1px solid #ccc;
+}
+
+.form-container form input[type='submit'] {
+    width: 100%;
+    height: 60px;
+    cursor: pointer;
+}
+
+.form-container form select {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 25px;
+    border: 1px solid #ccc;
+    color: #0e0e0e;
+
+}
+
+.form-container form label {
+    margin-bottom: 10px;
+    display: block;
 }
